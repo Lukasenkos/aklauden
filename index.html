@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Łukasz Śladowski">
+    <meta name="creator" content="Łukasz Śladowski">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amenu</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            transition: 1s;
+        }
+
+        body {
+            background: rgb(34, 36, 195);
+            background: linear-gradient(30deg, rgba(34, 36, 195, 1) 0%, rgba(42, 134, 217, 1) 55%, rgba(54, 213, 252, 1) 100%);
+            background-attachment: fixed;
+        }
+
+        h1 {
+            display: block;
+            float: left;
+            color: rgb(255, 255, 255);
+        }
+
+        ol {
+            list-style: none;
+        }
+
+        ul li {
+            float: right;
+            margin-left: 20px;
+        }
+
+        ul {
+            display: block;
+            list-style: none;
+        }
+
+        menu ul ul {
+            display: none;
+            position: relative;
+        }
+
+        a:focus~ul {
+            display: block;
+        }
+
+        a:hover {
+            cursor: pointer;
+        }
+
+        div ul {
+            display: block;
+        }
+
+        menu {
+            background-color: rgba(128, 128, 128, 0.60);
+            height: 50px;
+            padding: 20px;
+        }
+
+        h3 {
+            font-weight: 600;
+            padding-top: 10px;
+        }
+
+        main {
+            max-width: 1000px;
+            width: auto;
+            margin: 15px;
+            height: 100rem;
+            background-color: aliceblue;
+            margin: auto;
+            margin-top: 50px;
+            border-radius: 20px;
+            box-shadow: rgb(0, 0, 0) 5px 5px 10px 0px;
+        }
+
+        aside {
+            padding: 50px;
+        }
+
+        aside * {
+            margin: 10px;
+            font-size: 1.2rem;
+        }
+
+        aside p {
+            margin: 0 20px 0 20px;
+        }
+
+        aside img {
+            margin-left: 20%;
+            padding-top: 50px;
+        }
+
+        div.minimenu {
+            width: 600px;
+            padding: 20px;
+            background-color: aliceblue;
+            border-radius: 20px;
+            display: block;
+            box-shadow: rgb(0, 0, 0) 5px 5px 10px 0px;
+            position: absolute;
+            right: 100%;
+
+        }
+
+        div.minimenu * {
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+            /* display: block; */
+        }
+
+        div.dodatki {
+            padding: 20px;
+        }
+
+        div.dodatki div {
+            float: left;
+            margin-left: auto;
+            margin-right: auto;
+            width: 33.3%;
+            display: flex;
+            align-content: flex-start;
+            text-align: center;
+            transition: 0.8s;
+            border-radius: 20px;
+        }
+
+        div.dodatki div:hover {
+            background-color: rgb(190, 198, 198);
+            color: rgb(34, 34, 34);
+        }
+
+        div.dodatki div p {
+            margin: auto;
+            margin-left: 20px;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        div.dodatki div * {
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        footer {
+            width: 100%;
+            background-color: rgba(50, 50, 50, 0.6);
+            padding: 25px 0 25px 0;
+        }
+
+        footer h4 {
+            margin-left: 50px;
+        }
+
+
+        @media only screen and (max-width: 1080px) {
+            main {
+                width: 95%;
+            }
+
+            h1 {
+                color: rgb(211, 235, 255);
+            }
+
+            div.minimemu {
+                width: 80rem;
+            }
+
+            div.dodatki div {
+                width: 100%;
+                text-align: center;
+            }
+
+            div.dodatki div p {
+                font-size: 2rem;
+                margin-right: auto;
+                margin-left: auto;
+                background-color: rgb(217, 226, 226);
+                box-shadow: rgb(0, 0, 0) 1px 1px 10px 0px;
+                padding-left: 20px;
+                padding-right: 20px;
+                border-radius: 20px;
+                margin-bottom: 5px;
+                margin-top: 5px;
+                width: 90%;
+                transition: .08s;
+            }
+
+            div.dodatki div p:hover {
+                width: 100%;
+                background-color: rgb(190, 198, 198);
+                color: rgb(34, 34, 34);
+            }
+
+            div img {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <menu>
+        <h1>Aklaud</h1>
+        <ul>
+            <li><a tabindex="4"><img src="./add_circle_FILL0_wght400_GRAD0_opsz48.png" alt="Add"></a>
+            </li>
+            <li><a tabindex="4"><img src="./menu_FILL0_wght400_GRAD0_opsz48.png" alt="Menu"></a>
+                <ul>
+                    <li>
+                        <div class="minimenu">
+                            <h3>Aplikacje</h3>
+                            <div class="dodatki">
+                                <div><img src="./grade_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                                    <p>Poczta</p>
+                                </div>
+                                <div><img src="./grade_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                                    <p>Kontakty</p>
+                                </div>
+                                <div><img src="./grade_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                                    <p>Kalendarz</p>
+                                </div>
+                                <div><img src="./grade_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                                    <p>Zdjęcia</p>
+                                </div>
+                                <div><img src="./grade_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                                    <p>Drive</p>
+                                </div>
+                                <div><img src="./grade_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                                    <p>Notes</p>
+                                </div>
+                                <div><img src="./grade_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                                    <p>Przypomnienia</p>
+                                </div>
+                                <div><img src="./grade_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                                    <p>Pages</p>
+                                </div>
+                                <div><img src="./grade_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                                    <p>Numbers</p>
+                                </div>
+                                <div><img src="./grade_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                                    <p>ANotes</p>
+                                </div>
+                                <div><img src="./grade_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                                    <p>Find</p>
+                                </div>
+                                <div><img src="./grade_FILL0_wght400_GRAD0_opsz48.png" alt="">
+                                    <p>Zmiana hasła</p>
+                                </div>
+                            </div>
+                            <h3>Funkcje Aklaud+</h3>
+                            <p>Ukryj mój adres email</p>
+                            <p>Nestandaowa domena email</p>
+                            <p>Przekazywanie prywatne</p>
+                            <p>Prywatny monitoring w HomeKit</p>
+                            <h3>Więcej</h3>
+                            <p>Twoje miejsce AKlaud</p>
+                            <p>Twój pakiet Aklaud</p>
+                            <p>Odzyskanie danych</p>
+                            <p>Dostosuj stronę główna</p>
+                            <p><a href="">Podręcznik użytkownika</p></a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </menu>
+    <main>
+        <aside>
+            <h2>Ramdom content</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima velit fugiat sint reprehenderit
+                repudiandae molestias! Modi blanditiis iste doloribus itaque quasi, quos laudantium, ex eum possimus
+                culpa obcaecati tempora eos.</p>
+            <img src="./SUS2.png" alt="">
+            <p>Jeśli dobrze zrozumiałem to miałem za zadanie zrobić wysuwane menu więc jest, a to co w main to bez
+                różnicy :), dla wyższej oc...(sadysfakcji) zrobiłem też wersję mobilną</p>
+        </aside>
+    </main>
+    <footer>
+        <h4>Przygotował Łukasz Śladowski</h4>
+    </footer>
+</body>
+
+</html>
